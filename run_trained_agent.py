@@ -32,7 +32,7 @@ phi_state_size = 4      # The number of processed frames (where an action was se
 # Runs episodes using CNN weights learnt during training and records the episodes as mp4s
 # OR runs several trials for each set of weights to create an averaged learning graph
 
-create_mp4s = False     # Set to false to create averaged learning graph
+create_mp4s = True     # Set to false to create averaged learning graph
 
 # When creating average learning graph, number of trials to create average for set of weights
 number_of_trials_for_average = 100

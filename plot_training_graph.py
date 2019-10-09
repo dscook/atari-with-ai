@@ -24,7 +24,7 @@ with open(filename, 'r') as csv_file:
         
     # Average a SMALL sliding window across episodes to smooth the learning curve
     total_scores = np.array(total_scores)
-    window_size = 1
+    window_size = 20
     total_scores[:] = [
             (np.sum(total_scores[i-window_size+1:i+1]) / window_size) if i>(window_size-1)
             else (np.sum(total_scores[:i+1]) / (i+1)) for i in range(len(total_scores))]

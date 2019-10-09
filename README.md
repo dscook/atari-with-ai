@@ -3,6 +3,7 @@
 You will need a *nix based machine to run the code (i.e. Linux/Mac).
 
 1. Install the Python 3 version of Ananconda: https://www.anaconda.com/distribution/.
+1. Tensorflow and Keras must be additionally installed: ```conda install -c anaconda tensorflow``` and ```conda install -c anaconda keras``` or alternatively use the Anaconda UI package manager.
 1. Follow the instructions at https://github.com/openai/gym#installation to install OpenAI Gym with the Atari environment; in short `pip install gym` followed by `pip install gym[atari]`.
 1. Edit the `game_selection.py` file to select the game to play; space invaders or pong.
 1. Train an agent by running `python train.py`.

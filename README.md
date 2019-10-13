@@ -3,8 +3,8 @@
 You will need a *nix based machine to run the code (i.e. Linux/Mac).
 
 1. If you want a high score on Space Invaders, please use the the https://github.com/dscook/atari-with-ai/tree/space-invaders branch.
-1. Install the Python 3 version of Ananconda: https://www.anaconda.com/distribution/.
-1. Tensorflow and Keras must be additionally installed: ```conda install -c anaconda tensorflow``` and ```conda install -c anaconda keras``` or alternatively use the Anaconda UI package manager.
+1. Install the Python 3 version of Ananconda: https://www.anaconda.com/distribution/.  For a command line installation follow https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart.
+1. Tensorflow and Keras must be additionally installed: ```conda install -c anaconda tensorflow``` and ```conda install -c anaconda keras``` or alternatively use the Anaconda UI package manager.  If running on AWS Tensorflow and Keras must be installed through ```pip``` instead as the conda versions have a memory leak.
 1. Follow the instructions at https://github.com/openai/gym#installation to install OpenAI Gym with the Atari environment; in short `pip install gym` followed by `pip install gym[atari]`.
 1. Edit the `game_selection.py` file to select the game to play; space invaders or pong.
 1. Train an agent by running `python train.py`.

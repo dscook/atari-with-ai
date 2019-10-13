@@ -1,28 +1,23 @@
 import numpy as np
 
-# For normalising of reward
-# Note loss of life set to -305 and mothership assumed to be 200, the latter isn't always true as 
-# the number of points awarded often varies. (5,10,15,20,25,30) for aliens hit, 0 for nothing happened.
-# Mean of rewards possible is therefore 0.
-rewards_possible = [-305, 0, 5, 10, 15, 20, 25, 30, 200]
-reward_mean = np.mean(rewards_possible)
-reward_stdev = np.std(rewards_possible)
 
-def normalise_reward(reward, prev_lives, curr_lives):
+def normalise_reward(reward, prev_lives, curr_lives, game_over):
     """
-    Given a reward from the game normalises it zero mean and unit variance.
-    
     :param reward: the reward returned by the environment for taking the step.  In space invaders this is the
                    score after the action minus the score before the action.
     :param prev_lives: the lives before the action was taken.
     :param curr_lives: the lives after the action was taken.
-
+    :param game_over: True if the game has ended.
     """
-    # Check if we've lost a life and set the reward accordingly
+    # Check if we've lost a life, or the game is over, and set the reward accordingly
     if prev_lives != curr_lives:
-        reward = -305
+        reward = -1
+    if game_over:
+        reward = -1
+    if reward > 0:
+        reward = 1
 
-    return (reward - reward_mean) / reward_stdev
+    return reward
 
 
 def get_num_actions():

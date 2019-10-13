@@ -55,10 +55,11 @@ class Agent:
     def create_q_network(self):
         q_network = Sequential()
         q_network.add(Lambda(lambda x: x / 255.0, input_shape=self.state_size))
-        q_network.add(Conv2D(16, (8, 8), strides=4, activation='relu'))
-        q_network.add(Conv2D(32, (4, 4), strides=2, activation='relu'))
+        q_network.add(Conv2D(32, (8, 8), strides=4, activation='relu'))
+        q_network.add(Conv2D(64, (4, 4), strides=2, activation='relu'))
+        q_network.add(Conv2D(64, (3, 3), strides=1, activation='relu'))
         q_network.add(Flatten())
-        q_network.add(Dense(256, activation='relu'))
+        q_network.add(Dense(512, activation='relu'))
         q_network.add(Dense(self.num_actions, activation='linear'))
         return q_network
         

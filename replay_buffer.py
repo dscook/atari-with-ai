@@ -3,10 +3,8 @@
 
 import numpy as np
 
-# Experience replay buffer size.  Need to store current and next state in buffer for each entry so ...
-# Size ~ 2 * image size * frames repeated * 1 byte for each greyscale value * replay buffer size
-replay_buffer_size = 100000     # (2 * 84 * 84 * 4 * 1 * 100000 ~ 6GB)
-#replay_buffer_size = 200000   # AWS (2 * 84 * 84 * 4 * 1 * 200000 ~ 12GB)
+# Experience replay buffer size.  Need to store current and next state in buffer for each entry.
+replay_buffer_size = 700000     # (~ 24GB in practice)
 
 
 class ReplayBuffer:

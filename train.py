@@ -145,7 +145,7 @@ while frame_number < frames_to_train:
         total_score += reward
         
         # Normalise the reward and store the current number of lives
-        reward = normalise_reward(reward, num_lives, info['ale.lives'])
+        reward = normalise_reward(reward, num_lives, info['ale.lives'], done)
         reward_from_action += reward
         total_reward += reward
         num_lives = info['ale.lives']
@@ -159,7 +159,7 @@ while frame_number < frames_to_train:
         # Print and save the total score if the episode has ended
         if done:
             # Ensure we capture the game end new state in the replay buffer
-            # to capture the negative reward for loss of life
+            # to capture the negative reward for loss of life as well as the aliens reaching the bottom of the screen
             if state is not None:
                 replay_buffer.add(state, action, reward_from_action, None)
             

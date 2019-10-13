@@ -1,6 +1,6 @@
 import numpy as np
 
-def normalise_reward(reward, prev_lives, curr_lives):
+def normalise_reward(reward, prev_lives, curr_lives, game_over):
     """
     No reward normalisation is required in pong; -1 indicates opponent has
     scored, 0 indicates game is still in play and 1 indicates player has

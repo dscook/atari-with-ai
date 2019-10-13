@@ -2,6 +2,7 @@
 
 You will need a *nix based machine to run the code (i.e. Linux/Mac).
 
+1. If you want a high score on Space Invaders, please use the the https://github.com/dscook/atari-with-ai/tree/space-invaders branch.
 1. Install the Python 3 version of Ananconda: https://www.anaconda.com/distribution/.
 1. Tensorflow and Keras must be additionally installed: ```conda install -c anaconda tensorflow``` and ```conda install -c anaconda keras``` or alternatively use the Anaconda UI package manager.
 1. Follow the instructions at https://github.com/openai/gym#installation to install OpenAI Gym with the Atari environment; in short `pip install gym` followed by `pip install gym[atari]`.

@@ -15,8 +15,7 @@ You will need a *nix based machine to run the code (i.e. Linux/Mac).
 
 The code is an implementation of the following papers:
 
-* Mnih, V., Kavukcuoglu, K., Silver, D., Graves, A., Antonoglou, I., Wierstra, D. and Riedmiller, M.,
-2013. Playing atari with deep reinforcement learning. arXiv preprint arXiv:1312.5602.
+* Mnih, V., Kavukcuoglu, K., Silver, D., Graves, A., Antonoglou, I., Wierstra, D. and Riedmiller, M., 2013. Playing atari with deep reinforcement learning. arXiv preprint arXiv:1312.5602.
 * Mnih, V., Kavukcuoglu, K., Silver, D., Rusu, A.A., Veness, J., Bellemare, M.G., Graves, A.,
 Riedmiller, M., Fidjeland, A.K., Ostrovski, G. et al., 2015. Human-level control through deep
 reinforcement learning. Nature Publishing Group, vol. 518, p.529.
